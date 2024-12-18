@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import ExtraTreesRegressor
 
 # Load the dataset
-material_df = pd.read_csv('clean_filtered_materialsdata.csv')
+material_df = pd.read_csv('clean_filtered_materialsdata.csv', nrows=1000)
 
 # Define the feature columns and target column
 X = material_df.drop(columns=['efermi', 'band_gap', 'composition', 'is_metal'])
